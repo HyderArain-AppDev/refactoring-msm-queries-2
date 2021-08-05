@@ -22,16 +22,8 @@ class Movie < ApplicationRecord
 
  #   return the_one
  # end
-  belongs_to(:director)
+  belongs_to(:director, {:class_name => "Director", :foreign_key => "director_id"})
   has_many(:characters)
 
-  def cast
-      the_many = Array.new
-
-      self.characters.each.do |joining_record|
-        destination_record = joingin_record.actor
-        the_many.push(destination_record)
-      end
-      return the_many.flatten
-  end
+#
 end

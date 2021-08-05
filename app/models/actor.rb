@@ -33,6 +33,6 @@ class Actor < ApplicationRecord
   #  return the_many
  # end
  
-  has_many(:filmography, {:through => :characters, :source=> :actor})
+  has_many(:filmography, {:through => :characters, :source=> :movie})
 
 end 

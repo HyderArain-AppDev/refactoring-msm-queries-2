@@ -19,5 +19,6 @@ class Character < ApplicationRecord
 
   #  return the_one
     belongs_to(:movie)
+    belongs_to(:actor)
 #  end
 end
